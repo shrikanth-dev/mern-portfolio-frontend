@@ -74,8 +74,8 @@ export type CertificationFormData = {
   title: string;
   issuer: string;
   date: string; // ISO string (input type="date")
-  link?: string | null;
-  image?: string | null;
+  link: string | null;
+  image: string | null;
 }
 
 export type Props = {

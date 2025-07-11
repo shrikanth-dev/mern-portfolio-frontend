@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, type SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { createCertification } from '../../api/api';
@@ -11,9 +11,9 @@ const schema = yup.object({
   title: yup.string().required('Title is required'),
   issuer: yup.string().required('Issuer is required'),
   date: yup.string().required('Date is required'),
-  link: yup.string().url('Must be a valid URL').nullable().optional(),
-  image: yup.string().url('Must be a valid URL').nullable().optional(),
-});
+  link: yup.string().url('Must be a valid URL').nullable(),
+  image: yup.string().url('Must be a valid URL').nullable(),
+}).required();
 
 const CertificationFormModal: React.FC<Props> = ({
   isOpen,
@@ -27,25 +27,25 @@ const CertificationFormModal: React.FC<Props> = ({
     reset,
     formState: { errors, isSubmitting },
   } = useForm<CertificationFormData>({
-    resolver: yupResolver(schema),
+  resolver: yupResolver(schema as yup.ObjectSchema<CertificationFormData>),
     defaultValues: initialData
       ? {
           title: initialData.title,
           issuer: initialData.issuer,
           date: initialData.date.slice(0, 10), // for input type="date"
-          link: initialData.link || '',
-          image: initialData.image || '',
+          link: initialData.link ?? null,
+          image: initialData.image ?? null,
         }
       : {
           title: '',
           issuer: '',
           date: '',
-          link: '',
-          image: '',
+          link: null,
+          image: null,
         },
   });
 
-  const onSubmit = async (data: CertificationFormData) => {
+  const onSubmit: SubmitHandler<CertificationFormData> = async (data) => {
     try {
       await createCertification(data);
       onSubmitSuccess();
@@ -59,7 +59,9 @@ const CertificationFormModal: React.FC<Props> = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <form onSubmit={handleSubmit(onSubmit)} className="form-container">
-        <h2>{initialData ? 'Edit Certification' : 'Add Certification'}</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>
+          {initialData ? 'Edit Certification' : 'Add Certification'}
+        </h2>
 
         <input placeholder="Title" {...register('title')} />
         {errors.title && <span className="error-text">{errors.title.message}</span>}

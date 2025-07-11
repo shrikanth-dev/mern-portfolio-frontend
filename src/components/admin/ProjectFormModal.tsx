@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, type SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { createProject, updateProject } from '../../api/api';
@@ -10,36 +10,25 @@ import '../../styles/ProjectsFormModal.css';
 const schema = yup.object({
   title: yup.string().required('Title is required'),
   description: yup.string().required('Description is required'),
-
-//  image: yup.string().required('Image is required'),
-//   github: yup.string().url('Must be a valid URL').required('GitHub URL is required'),
-//   live: yup.string().url('Must be a valid URL').required('Live URL is required'),
-
-image: yup.string()
-  .nullable()
-  .transform((value) => (value === '' ? null : value))
-  .url('Must be a valid URL')
-  .optional(),
-
-  github: yup.string()
-  .nullable()
-  .transform((value) => (value === '' ? null : value))
-  .url('Must be a valid URL')
-  .optional(),
-
-live: yup.string()
-  .nullable()
-  .transform((value) => (value === '' ? null : value))
-  .url('Must be a valid URL')
-  .optional(),
-
+  image: yup
+    .string()
+    .url('Must be a valid URL')
+    .required('Image URL is required'),
+  github: yup
+    .string()
+    .url('Must be a valid URL')
+    .required('GitHub URL is required'),
+  live: yup
+    .string()
+    .url('Must be a valid URL')
+    .required('Live URL is required'),
 }).required();
 
 const ProjectFormModal: React.FC<ProjectFormModalProps> = ({
   isOpen,
   onClose,
   initialData,
-  onSubmitSuccess
+  onSubmitSuccess,
 }) => {
   const [imageSource, setImageSource] = useState<'url' | 'file'>('url');
 
@@ -51,21 +40,13 @@ const ProjectFormModal: React.FC<ProjectFormModalProps> = ({
     formState: { errors, isSubmitting },
   } = useForm<ProjectFormData>({
     resolver: yupResolver(schema),
-    defaultValues: initialData
-      ? {
-          title: initialData.title,
-          description: initialData.description,
-          image: initialData.image,
-          github: initialData.github,
-          live: initialData.live,
-        }
-      : {
-          title: '',
-          description: '',
-          image: '',
-          github: '',
-          live: '',
-        },
+    defaultValues: initialData ?? {
+      title: '',
+      description: '',
+      image: '',
+      github: '',
+      live: '',
+    },
   });
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -81,7 +62,7 @@ const ProjectFormModal: React.FC<ProjectFormModalProps> = ({
     }
   };
 
-  const onSubmit = async (data: ProjectFormData) => {
+  const onSubmit: SubmitHandler<ProjectFormData> = async (data) => {
     try {
       if (initialData && initialData._id) {
         await updateProject(initialData._id, data);
