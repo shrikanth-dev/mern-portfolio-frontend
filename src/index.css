@@ -1,0 +1,56 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  /* ⚠️ Removed hardcoded background and color here to allow theme switching */
+}
+
+
+/* Smooth transition for theme changes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+
+body.light a {
+  color: #007bff;
+}
+
+body.dark a {
+  color: #90caf9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+

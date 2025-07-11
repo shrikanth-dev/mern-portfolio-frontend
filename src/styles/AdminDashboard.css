@@ -1,0 +1,128 @@
+.admin-dashboard-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.admin-dashboard-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard-container p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-secondary, #666);
+}
+
+.admin-dashboard-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--card-bg, #f9f9f9);
+  color: var(--card-text, #333);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  flex: 1 1 200px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.stat-card h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.stat-card p {
+  margin: 0.25rem 0 0;
+}
+
+.admin-dashboard-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.admin-dashboard-actions button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-dashboard-actions button:hover {
+  background: #0056b3;
+}
+
+.admin-dashboard-recent {
+  margin-top: 2rem;
+}
+
+.recent-section {
+  margin-bottom: 2rem;
+}
+
+.recent-section h3 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.recent-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-section li {
+  background: var(--card-bg, #f9f9f9);
+  color: var(--card-text, #333);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode adjustments */
+body.dark .stat-card,
+body.dark .recent-section li {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+
+
+
+
+
+/* src/styles/AdminDashboard.css */
+
+.admin-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+

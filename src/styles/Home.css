@@ -1,0 +1,344 @@
+/* Base transition for smoothness */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container */
+.home-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Intro Section */
+.intro-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.intro-section h2 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Section Headings */
+.section {
+  margin-top: 2rem;
+}
+
+.section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: 500;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Common Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+.card-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* View More Link */
+.view-more {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.view-more a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Preview Cards */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.preview-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.preview-card:hover {
+  transform: translateY(-3px);
+}
+
+/* === DARK MODE === */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark .intro-section h2 {
+  color: #ccc;
+}
+
+body.dark .intro-section p {
+  color: #bbb;
+}
+
+body.dark .section h3 {
+  color: #f0f0f0;
+}
+
+body.dark .skill-card,
+body.dark .card,
+body.dark .preview-card {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .card-body p,
+body.dark .card-body h4 {
+  color: #e0e0e0;
+}
+
+body.dark .card-links a,
+body.dark .view-more a {
+  color: #90caf9;
+}
+
+
+
+
+
+
+.cta-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-button  {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background: var(--button-bg, #007bff);
+  color: var(--button-text, #ffffff) !important; 
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+}
+
+.cta-button.secondary  {
+  background: var(--button-secondary-bg, #6c757d);
+  color: var(--button-text, #ffffff);
+}
+
+.cta-button:hover {
+  background: var(--button-hover-bg, #0056b3);
+}
+
+.cta-button.secondary:hover {
+  background: var(--button-secondary-hover-bg, #5a6268);
+}
+
+body.light {
+  --button-bg: #007bff;
+  --button-hover-bg: #0056b3;
+  --button-secondary-bg: #6c757d;
+  --button-secondary-hover-bg: #5a6268;
+  --button-text: #ffffff;
+}
+
+body.dark {
+  --button-bg: #0d6efd;
+  --button-hover-bg: #0a58ca;
+  --button-secondary-bg: #495057;
+  --button-secondary-hover-bg: #343a40;
+  --button-text: #ffffff;
+}
+
+
+
+
+/* src/styles/Home.css
+.home-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.intro-section h2 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+.card-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-more {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.view-more a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+} */
