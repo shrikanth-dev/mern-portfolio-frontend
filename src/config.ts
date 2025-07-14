@@ -39,7 +39,7 @@ const config: Config = {
     linkedin: "https://www.linkedin.com/in/g-srikanth-gs",
     twitter: "#",
   },
-  skills: ["JavaScript", "TypeScript", "React", "Node.js", "MongoDB", "Express","SQL", "BOOTSTRAP", "HTML & CSS", "SASS",],
+  skills: ["JavaScript", "TypeScript", "React", "Node.js", "MongoDB", "Express","SQL", "Supabase", "BOOTSTRAP", "HTML & CSS", "SASS",],
   projects: [
     {
       title: "MERN AI Portfolio",
@@ -60,7 +60,7 @@ const config: Config = {
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/g-srikanth-gs', icon: FaLinkedin },
     { name: 'GitHub', url: 'https://github.com/shrikanth-dev', icon: FaGithub },
     { name: 'Twitter', url: '#', icon: FaTwitter },
-    { name: 'Email', url: 'shrikanth.godugu@gmail.com', icon: FaEnvelope },
+    { name: 'Email', url: 'mailto:shrikanth.godugu@gmail.com', icon: FaEnvelope },
   ],
 };
 

@@ -1,69 +1,94 @@
-# React + TypeScript + Vite
+# shrikanth.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The Challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Built With](#built-with)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Author](#author)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+This is the **frontend** of the MERN AI-powered portfolio application. It showcases projects, certifications, testimonials, and includes an admin dashboard for managing portfolio data dynamically, using a connected Node.js/Express backend and MongoDB.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### The Challenge
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Build a **scalable, responsive portfolio**.
+- Enable **admin to add/update/delete projects and certifications** via dashboard.
+- Integrate **AI features** such as automatic content generation (future enhancement).
+- Connect to **live backend API** for real-time data management.
+- Optimize for **SEO and performance** for real-world deployment.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Screenshot
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![Portfolio Screenshot](screenshot.png)
+![Home Page](public/images/HomePage.png)
+![Projects Page](public/images/Projects%20Page.png)
+![Certifications Page](public/images/Certifications%20Page.png)
+![Testimonials Page](public/images/Testimonials%20Page.png)
+![Blog Page](public/images/Blog%20Page.png)
+![Contact Page](public/images/Contact%20Page.png)
+![Admin Login](public/images/Admin%20Login.png)
+![Admin DashBoard](public/images/Admin%20DashBoard%20Page.png)
+![Admin DashBoard](public/images/Admin%20DashBord%20Page1.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Links
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Live Site:** [https://mern-portfolio-frontend-srikanth-godugus-projects.vercel.app/](https://mern-portfolio-frontend-srikanth-godugus-projects.vercel.app/)
+- **Backend Repository:** [https://github.com/shrikanth-dev/mern-portfolio-backend](https://github.com/shrikanth-dev/mern-portfolio-backend)
+- **Frontend Repository:** [https://github.com/shrikanth-dev/mern-portfolio-frontend](https://github.com/shrikanth-dev/mern-portfolio-frontend)
+
+### Built With
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/) (if used)
+- [React Hook Form](https://react-hook-form.com/)
+- [Yup](https://github.com/jquense/yup)
+- [Axios](https://axios-http.com/)
+- [Vercel](https://vercel.com/) for deployment
+
+## Features
+
+- Fully responsive modern UI  
+- Admin dashboard for project/certification management  
+- Connects to live backend for dynamic content  
+- Form validation with React Hook Form + Yup  
+-- SEO-friendly structure  
+- Optimized build with Vite
+
+## Getting Started
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/shrikanth-dev/mern-portfolio-frontend.git
+cd mern-portfolio-frontend
+
+2. **Install dependencies:**
+
+```bash
+npm install
+
+3. **Add environment variables:**
+
+Create a .env file:
+```ini
+VITE_API_URL=http://localhost:5000
+
+4. **Run the development server:**
+
+```bash
+npm run dev
+
+## Author
+
+- Shrikanth-Dev
+- [GitHub](https://github.com/shrikanth-dev)
+- LinkedIn - [@G Srikanth](https://www.linkedin.com/in/g-srikanth-gs)
