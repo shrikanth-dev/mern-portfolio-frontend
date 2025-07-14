@@ -25,8 +25,7 @@ This is the **frontend** of the MERN AI-powered portfolio application. It showca
 
 ### Screenshot
 
-![Portfolio Screenshot](screenshot.png)
-![Home Page](public/images/HomePage.png)
+![Home Page](public/images/Home%20Page.png)
 ![Projects Page](public/images/Projects%20Page.png)
 ![Certifications Page](public/images/Certifications%20Page.png)
 ![Testimonials Page](public/images/Testimonials%20Page.png)
@@ -63,6 +62,12 @@ This is the **frontend** of the MERN AI-powered portfolio application. It showca
 -- SEO-friendly structure  
 - Optimized build with Vite
 
+## Author
+
+- Shrikanth-Dev
+- [GitHub](https://github.com/shrikanth-dev)
+- LinkedIn - [@G Srikanth](https://www.linkedin.com/in/g-srikanth-gs)
+
 ## Getting Started
 
 1. **Clone the repository:**
@@ -87,8 +92,3 @@ VITE_API_URL=http://localhost:5000
 ```bash
 npm run dev
 
-## Author
-
-- Shrikanth-Dev
-- [GitHub](https://github.com/shrikanth-dev)
-- LinkedIn - [@G Srikanth](https://www.linkedin.com/in/g-srikanth-gs)
