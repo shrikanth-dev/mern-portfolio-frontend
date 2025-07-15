@@ -38,7 +38,7 @@ This is the **frontend** of the MERN AI-powered portfolio application. It showca
 
 ### Links
 
-- **Live Site:** [https://mern-portfolio-frontend-srikanth-godugus-projects.vercel.app/](https://mern-portfolio-frontend-srikanth-godugus-projects.vercel.app/)
+- **Live Site:** [https://shrikanthdev-portfolio.vercel.app/](https://shrikanthdev-portfolio.vercel.app/)
 - **Backend Repository:** [https://github.com/shrikanth-dev/mern-portfolio-backend](https://github.com/shrikanth-dev/mern-portfolio-backend)
 - **Frontend Repository:** [https://github.com/shrikanth-dev/mern-portfolio-frontend](https://github.com/shrikanth-dev/mern-portfolio-frontend)
 
