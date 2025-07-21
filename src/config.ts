@@ -42,18 +42,18 @@ const config: Config = {
   skills: ["JavaScript", "TypeScript", "React", "Node.js", "MongoDB", "Express","SQL", "Supabase", "BOOTSTRAP", "HTML & CSS", "SASS",],
   projects: [
     {
-      title: "MERN AI Portfolio",
-      description: "A stunning portfolio built with MERN stack and AI integrations.",
-      image: "/assets/portfolio.png",
-      github: "https://github.com/yourhandle/mern-ai-portfolio",
-      live: "https://yourportfolio.vercel.app",
+      title: "Quiz App",
+      description: "TestlyHub is a clean, modern marketplace for MCQ practice tests, allowing users to attempt free and paid quizzes, track progress, and view leaderboards to enhance their preparation journey",
+      image: "https://res.cloudinary.com/dyy1lrdhl/image/upload/v1752759163/HomePage_gq87wi.png",
+      github: "https://github.com/shrikanth-dev/testlyhub-frontend",
+      live: "https://testlyhub-frontend.vercel.app/",
     },
     {
-      title: "Quiz App",
-      description: "A full-stack quiz application with leaderboard and timed tests.",
-      image: "/assets/quiz.png",
-      github: "https://github.com/yourhandle/quiz-app",
-      live: "https://quizapp.vercel.app",
+      title: "A Smart TV OTT Platform UI",
+      description: "This project is a Smart TV OTT Platform UI built with React, TypeScrip…",
+      image: "https://res.cloudinary.com/dyy1lrdhl/image/upload/v1752759053/HomePage-SpotlightCarousel_la9zs6.png",
+      github: "https://github.com/shrikanth-dev/Smart-TV-OTT-Platform-UI",
+      live: "https://shrikanth-dev.github.io/Smart-TV-OTT-Platform-UI/",
     },
   ],
   socials: [

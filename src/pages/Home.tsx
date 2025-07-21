@@ -41,7 +41,7 @@ const Home: React.FC = () => {
 
           <div className="cta-buttons">
       <motion.a
-        href="https://drive.google.com/uc?export=download&id=1VjsC_YsVyszRgnfqreg8tIeXufROgKIv" // replace with resume path
+        href="https://drive.google.com/uc?export=download&id=1Ds7z73evkG5Id0_7cW3QwTogFS7PdgCu" 
         download
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.97 }}
