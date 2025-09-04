@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import API from '../api/api';
+import Loader from '../components/_common/Loader';
 
 interface Blog {
   _id: string;
@@ -14,9 +15,9 @@ interface Blog {
 const Blog: React.FC = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
-    const [isDarkMode, setIsDarkMode] = useState<boolean>(document.body.classList.contains('dark'));
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(document.body.classList.contains('dark'));
 
-  // Detect theme changes and update
+
   useEffect(() => {
     const observer = new MutationObserver(() => {
       setIsDarkMode(document.body.classList.contains('dark'));
@@ -27,6 +28,7 @@ const Blog: React.FC = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
+      setLoading(true);
       try {
         const res = await API.get('/api/blogs');
         setBlogs(res.data);
@@ -50,7 +52,7 @@ const Blog: React.FC = () => {
       <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Blog</h2>
 
       {loading ? (
-        <p style={{ textAlign: 'center' }}>Loading blogs...</p>
+        <Loader /> 
       ) : blogs.length === 0 ? (
         <p style={{ textAlign: 'center' }}>No blogs available yet.</p>
       ) : (
@@ -137,5 +139,3 @@ const Blog: React.FC = () => {
 };
 
 export default Blog;
-
-
